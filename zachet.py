@@ -74,6 +74,11 @@ def check_port(ip, port):
     '''
     Функция возвращает True если порт открыт, иначе False
     SOCK_STREAM  означает что это TCP socket.
+    ip, port передаем в getaddrinfo, чтобы получить правильные параметры для sock.connect_ex.
+    Для ipv4 это кортеж из (ip, port), для ipv6 - кортеж из четырех элементов. 
+    socket.socket - инициализируем сокет. 
+    Устанавливаем таймаут на операции с сокетом, чтобы ничего не зависло, если что-то пойдет не так.
+    sock.connect_ex - пробуем приконнектиться, если возвращает 0, то коннект успешен
     '''
     family, kind, _, _, address = socket.getaddrinfo(ip, port, 0, socket.SOCK_STREAM)[0]
     sock = socket.socket(family, kind)

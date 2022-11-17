@@ -35,14 +35,14 @@ choice = input("Do you wish to use the hard-coded Webex token? (y/n) ")
 
 if choice == "y":
     print('OK, we\'ll go with the hard-coded token.')
-    accessToken = "Bearer YWJjMzIwMjItNzhiZi00NzI1LWJhOGQtY2NlM2M3NmIwMmM5MzE5Y2Q5ZjAtNGFl_P0A1_341dae44-c950-442b-9f1d-460f9ec#####"
+    accessToken = "Bearer YmM0YjkwOTEtODBlNi00MTEzLTkxNWItNGE5ZGJjYjdkYjA1OTdkNzczMDYtMGVk_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
 
 elif choice == "n":
     print('This will not have the desired outcome.')
     quit()  
 
 else:
-	accessToken = "Bearer YWJjMzIwMjItNzhiZi00NzI1LWJhOGQtY2NlM2M3NmIwMmM5MzE5Y2Q5ZjAtNGFl_P0A1_341dae44-c950-442b-9f1d-460f9ec#####"
+	accessToken = "Bearer YmM0YjkwOTEtODBlNi00MTEzLTkxNWItNGE5ZGJjYjdkYjA1OTdkNzczMDYtMGVk_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
 
 # 3. Provide the URL to the Webex Teams room API.
 r = requests.get(   url = "https://webexapis.com/v1/rooms",
@@ -121,7 +121,7 @@ while True:
 # 6. Provide your MapQuest API consumer key.
         mapsAPIGetParameters = { 
                                 "location": location, 
-                                "key": "jPQyskdG6120exKDXl602AAshQB###"
+                                "key": "nQTtY562pVGzkkkBBEBqEmjBe5MA4xSE"
                                }
 # 7. Provide the URL to the MapQuest address API.
         r = requests.get("https://www.mapquestapi.com/geocoding/v1/address", 

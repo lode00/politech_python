@@ -35,7 +35,7 @@ choice = input("Do you wish to use the hard-coded Webex token? (y/n) ")
 
 if choice == "y":
     print('OK, we\'ll go with the hard-coded token.')
-    accessToken = "Bearer YmM0YjkwOTEtODBlNi00MTEzLTkxNWItNGE5ZGJjYjdkYjA1OTdkNzczMDYtMGVk_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
+    accessToken = "Bearer ZmY0N2U1ZDctZGIwNS00MmU0LTkwY2MtODJmNTY0OGVmNTFiMzkyNThiNjktN2Fj_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
 
 elif choice == "n":
     print('This will not have the desired outcome.')

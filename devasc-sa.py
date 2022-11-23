@@ -132,7 +132,7 @@ while True:
         if not json_data["info"]["statuscode"] == 0:
             raise Exception("Incorrect reply from MapQuest API. Status code: {}".format(r.statuscode))
 
-        locationResults = json_data["results"][0]["providedLocation"]["location"]["lat"] +  json_data["results"][0]["providedLocation"]["location"]["lon"]
+        locationResults = json_data["results"][0]["providedLocation"]["location"]
         print("Location: " + locationResults)
 		
 # 8. Provide the MapQuest key values for latitude and longitude.

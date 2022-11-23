@@ -162,7 +162,7 @@ while True:
 
 # 12. Complete the code to format the response message.
 #     Example responseMessage result: In Austin, Texas the ISS will fly over on Thu Nov 16 18:42:36 2022 for 242 seconds.
-        responseMessage = "In {} the ISS will fly over on {} for {} seconds.".format(locationResults, risetimeInFormattedString, durationInSeconds)
+        responseMessage = "The coordinates {} will fly over on {} for {} seconds.".format(locationResults, risetimeInFormattedString, durationInSeconds)
 
         print("Sending to Webex Teams: " +responseMessage)
 

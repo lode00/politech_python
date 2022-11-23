@@ -35,14 +35,14 @@ choice = input("Do you wish to use the hard-coded Webex token? (y/n) ")
 
 if choice == "y":
     print('OK, we\'ll go with the hard-coded token.')
-    accessToken = "Bearer ZmY0N2U1ZDctZGIwNS00MmU0LTkwY2MtODJmNTY0OGVmNTFiMzkyNThiNjktN2Fj_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
+    accessToken = "Bearer OTIzNjgyMWUtOWZmOC00ZDY2LWI1ODktYjYwMTI0YzY0NThkOWQyMDJmYzctZDli_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
 
 elif choice == "n":
     print('This will not have the desired outcome.')
     quit()  
 
 else:
-	accessToken = "Bearer YmM0YjkwOTEtODBlNi00MTEzLTkxNWItNGE5ZGJjYjdkYjA1OTdkNzczMDYtMGVk_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
+	accessToken = "Bearer OTIzNjgyMWUtOWZmOC00ZDY2LWI1ODktYjYwMTI0YzY0NThkOWQyMDJmYzctZDli_P0A1_71b6b34c-abff-4407-ac50-5e62323aed80"
 
 # 3. Provide the URL to the Webex Teams room API.
 r = requests.get(   url = "https://webexapis.com/v1/rooms",
@@ -132,7 +132,7 @@ while True:
         if not json_data["info"]["statuscode"] == 0:
             raise Exception("Incorrect reply from MapQuest API. Status code: {}".format(r.statuscode))
 
-        locationResults = json_data["results"][0]["providedLocation"]["location"]
+        locationResults = json_data["results"][0]["providedLocation"]["location"][''lat''] +  json_data["results"][0]["providedLocation"]["location"][''lon'']
         print("Location: " + locationResults)
 		
 # 8. Provide the MapQuest key values for latitude and longitude.
